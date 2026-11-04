@@ -1,0 +1,8 @@
+{
+  firstname: 'Eric',
+  lastname: 'Brown',
+  totalprice: 562,
+  depositpaid: false,
+  bookingdates: { checkin: '2025-05-06', checkout: '2026-04-28' },
+  additionalneeds: 'Breakfast'
+}

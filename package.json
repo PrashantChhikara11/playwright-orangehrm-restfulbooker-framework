@@ -1,0 +1,41 @@
+{
+  "name": "manual_framework1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_QA": "cross-env ENV_NAME=qa npx playwright test",
+    "test_DEV": "cross-env ENV_NAME=dev npx playwright test",
+    "test_Headed": "cross-env ENV_NAME=dev npx playwright test --project=chromium --headed",
+    "test_mode_Ui": "cross-env ENV_NAME=dev npx playwright test --ui",
+    "test_UAT":"cross-env ENV_NAME=dev npx playwright test --project=chromium --grep=@UAT",
+    "test_PIM":"cross-env ENV_NAME=dev npx playwright test --project=chromium --grep=@PIM",
+    "test_Visual":"cross-env ENV_NAME=dev npx playwright test --project=chromium --grep=@VISUAL",
+    "test_Last_Failed":"cross-env ENV_NAME=dev npx playwright test --project=chromium --last-failed",
+    "test_api":"cross-env ENV_NAME=dev npx playwright test --project=apiTest",
+    "test_web_hd_cr_api":"cross-env ENV_NAME=dev npx playwright test --project=chromium --headed --project=apiTest"
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^26.6.2"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@faker-js/faker": "^10.6.0",
+    "ajv": "^8.20.0",
+    "allure-playwright": "^3.12.2",
+    "cross-env": "^10.1.0",
+    "crypto-js": "^4.2.0",
+    "csv-parse": "^7.0.2",
+    "dotenv": "^18.0.1",
+    "luxon": "^3.7.2",
+    "mysql2": "^3.24.4",
+    "xlsx": "^0.18.5"
+  }
+}

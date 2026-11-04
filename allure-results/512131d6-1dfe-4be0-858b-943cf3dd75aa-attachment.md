@@ -1,0 +1,54 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: web\login-module.spec.ts >> [Login] Verify that user cannot login with invalid UserName and Password 
+- Location: tests\web\login-module.spec.ts:25:5
+
+# Error details
+
+```
+Error: toHaveText can be only used with Locator object, was called with undefined
+```
+
+# Test source
+
+```ts
+  1  | import {test,expect} from '../../fixtures/hooks-fixtires';
+  2  | import loginModuleData from '../../testdata/login-module-data.json';
+  3  | 
+  4  | test.use({storageState:{
+  5  |    cookies:[],
+  6  |    origins:[]
+  7  | }})
+  8  | 
+  9  | test('[Login] Verify that user cannot login with invalid password',async({goToUrl,loginPage})=>{
+  10 | 
+  11 |    await loginPage.oragngeHrmLogin(process.env.USER_NAME!,loginModuleData.wrong_password);
+  12 |    await expect(loginPage.invalidCredsErrorPopUp).toHaveText(loginModuleData.invalid_credentials_text);
+  13 |    await expect(loginPage.userNameInput).toBeVisible();
+  14 | 
+  15 | })
+  16 | 
+  17 | test('[Login] Verify that user cannot login with invalid UserName ',async({goToUrl,loginPage})=>{
+  18 | 
+  19 |    await loginPage.oragngeHrmLogin(loginModuleData.wrong_username,process.env.PASSWORD!);
+  20 |    await expect(loginPage.invalidCredsErrorPopUp).toHaveText(loginModuleData.invalid_credentials_text);
+  21 |    await expect(loginPage.userNameInput).toBeVisible();
+  22 | 
+  23 | })
+  24 | 
+  25 | test('[Login] Verify that user cannot login with invalid UserName and Password ',async({goToUrl,loginPage})=>{
+  26 | 
+  27 |    await loginPage.oragngeHrmLogin(loginModuleData.wrong_username,loginModuleData.wrong_password);
+> 28 |    await expect(loginPage.invalidCredsErrorPopUp).toHaveText(loginModuleData.invalid_credentials_text);
+     |                                                   ^ Error: toHaveText can be only used with Locator object, was called with undefined
+  29 |    await expect(loginPage.userNameInput).toBeVisible();
+  30 | 
+  31 | })
+  32 | 
+```

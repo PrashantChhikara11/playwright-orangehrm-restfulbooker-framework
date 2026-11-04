@@ -1,0 +1,21 @@
+booking/123
+{ firstname: 'Pavan', lastname: 'Sir' }
+APIResponse: 200 OK
+  Content-Length: 178
+  Content-Type: application/json; charset=utf-8
+  Date: Mon, 12 Oct 2026 06:57:14 GMT
+  Etag: W/"b2-z+MrJlqQWwS2fI0YIOhvDYnqEIM"
+  Nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+  Report-To: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=lFlrJA0mVgIZ4ptrFKMyZMY%2BgomuA9CO9j9rfRhw7fY%3D\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\u0026ts=1791788234"}],"max_age":3600}
+  Reporting-Endpoints: heroku-nel="https://nel.heroku.com/reports?s=lFlrJA0mVgIZ4ptrFKMyZMY%2BgomuA9CO9j9rfRhw7fY%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1791788234"
+  Server: Heroku
+  Via: 1.1 heroku-router
+  X-Powered-By: Express
+{
+  firstname: 'Jane',
+  lastname: 'Doe',
+  totalprice: 111,
+  depositpaid: true,
+  bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
+  additionalneeds: 'Extra pillows please'
+}

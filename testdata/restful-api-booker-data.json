@@ -1,0 +1,44 @@
+{
+    "content_type":"application/json; charset=utf-8",
+    "bookind_id":"12",
+    "booking_id2":"123",
+    "booking_id3":"4",
+
+    "create_booking":{
+
+                    "firstname" : "Created",
+                    "lastname" : "Brown",
+                    "totalprice" : 11,
+                    "depositpaid" : true,
+                    "bookingdates" : {
+                        "checkin" : "2018-01-01",
+                        "checkout" : "2019-01-01"
+                                     },
+                "additionalneeds" : "Breakfast"
+
+                },
+
+"update_booking":{
+
+                    "firstname" : "Prithivi",
+                    "lastname" : "shaw",
+                    "totalprice" : 11,
+                    "depositpaid" : true,
+                    "bookingdates" : {
+                        "checkin" : "2026-12-12",
+                        "checkout" : "2026-12-12"
+                                     },
+                "additionalneeds" : "Boom"
+
+                },
+    
+    "update_partial_booking":{
+        "firstname" : "Pavan",
+        "lastname" : "Sir"
+    }
+
+
+    
+
+
+}
